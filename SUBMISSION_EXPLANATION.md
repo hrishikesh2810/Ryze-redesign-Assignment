@@ -30,13 +30,18 @@ I transitioned from a cluttered light theme to a **“Dark Mode First” aesthet
 
 ## 3. System Architecture & Scalability
 
-### 3.1 Modular Component Design
-The codebase follows a strictly component-based architecture to maximize reusability and development speed.
-*   `/components/sections` – Page-level modules (Hero, Features, Footer)
-*   `/components/ui` – Atomic UI elements (Buttons, Inputs, Badges)
-*   `/components/layout` – Global structural components (Navbar, Wrappers)
+### 3.1 Lightweight Static Architecture
+I prioritized effective implementation and raw performance by choosing **HTML5, Tailwind CSS, and Vite** over complex frameworks.
 
-**Outcome:** This structure allows new landing pages to be assembled by recombining existing components, without requiring new engineering work.
+*   **HTML/CSS/JS:** By stripping away the complexity of React/Next.js, I reduced the "concept count" required to maintain the site. This directly addresses the goal of "easiest implementation".
+*   **Vite:** Used purely for ultra-fast development (HMR) and optimized building.
+*   **Modular styling:** Style consistency is handled by Tailwind's utility classes and a centralized `style.css` for animations.
+
+### 3.2 Modular HTML Structure
+Although not component-based in the React sense, I maintained modularity by:
+*   Using consistent `nav` and `footer` blocks across all HTML files.
+*   Defining key UI tokens (colors, fonts, animations) in `tailwind.config.js`.
+
 
 ---
 

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Features - Ryze.ai</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script type="module" crossorigin src="/assets/main-B2CNYkkq.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-C30iopr8.css">
+</head>
+
+<body class="bg-slate-950 text-slate-50 font-sans selection:bg-indigo-500 selection:text-white overflow-x-hidden">
+
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div
+            class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-600/20 rounded-full blur-[120px] move-slow">
+        </div>
+        <div
+            class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-rose-600/10 rounded-full blur-[120px] move-slow-reverse">
+        </div>
+    </div>
+
+    <!-- Navigation (Duplicated for simplicity in static site) -->
+    <nav
+        class="fixed top-0 left-0 w-full z-50 border-b border-white/5 bg-slate-950/80 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-bold font-outfit tracking-tight flex items-center gap-2">
+                <span class="bg-gradient-to-r from-indigo-400 to-rose-400 bg-clip-text text-transparent">Ryze.ai</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="features.html" class="text-white transition-colors">Features</a>
+                <a href="pricing.html" class="hover:text-white transition-colors">Pricing</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="#"
+                    class="hidden md:block text-sm font-medium text-slate-300 hover:text-white transition-colors">Login</a>
+                <a href="#"
+                    class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full text-sm font-semibold transition-all hover:shadow-[0_0_20px_rgba(99,102,241,0.5)]">
+                    Get Started
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-slate-950 pt-24 px-6 md:hidden">
+        <div class="flex flex-col gap-6 text-xl font-medium text-slate-300">
+            <a href="features.html" class="text-white">Features</a>
+            <a href="pricing.html" class="hover:text-white">Pricing</a>
+            <hr class="border-white/10">
+            <a href="#" class="hover:text-white">Login</a>
+        </div>
+    </div>
+
+    <main class="pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h1 class="text-4xl md:text-6xl font-bold font-outfit mb-6">Powerful Features</h1>
+                <p class="text-xl text-slate-400 max-w-2xl mx-auto">Everything you need to scale your content marketing
+                    efforts without losing quality.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature Cards -->
+                <div
+                    class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-indigo-500/50 transition-all hover:bg-white/10">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AI Content Engine</h3>
+                    <p class="text-slate-400">Generates high-quality blog posts, social captions, and emails in seconds.
+                    </p>
+                </div>
+
+                <div
+                    class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-rose-500/50 transition-all hover:bg-white/10">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Analytics Dashboard</h3>
+                    <p class="text-slate-400">Real-time insights on how your content performs across all channels.</p>
+                </div>
+
+                <div
+                    class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-purple-500/50 transition-all hover:bg-white/10">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Auto-Optimization</h3>
+                    <p class="text-slate-400">Automatically tweaks headlines and meta tags for maximum SEO impact.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-white/10 py-12 px-6 mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-slate-400 text-sm">
+                © 2026 Ryze.ai. All rights reserved.
+            </div>
+            <div class="flex gap-6 text-sm font-medium text-slate-400">
+                <a href="#" class="hover:text-white">Privacy</a>
+                <a href="#" class="hover:text-white">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

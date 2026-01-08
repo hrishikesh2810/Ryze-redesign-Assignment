@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply antialiased text-slate-50 bg-slate-950;
+    }
+}
+
+.move-slow {
+    animation: move 20s infinite alternate;
+}
+
+.move-slow-reverse {
+    animation: moveReverse 25s infinite alternate;
+}
+
+@keyframes move {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(20%, -20%) scale(1.1);
+    }
+}
+
+@keyframes moveReverse {
+    from {
+        transform: translate(0, 0) scale(1.1);
+    }
+
+    to {
+        transform: translate(-20%, 20%) scale(1);
+    }
+}
