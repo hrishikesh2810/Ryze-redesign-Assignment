@@ -1,14 +1,13 @@
 # Ryze.ai Redesign - Assignment Submission
 
 ## Project Overview
-This repository contains the completely redesigned frontend for Get-Ryze.ai. The project focuses on a premium, dark-mode-first aesthetic suitable for a high-tech AI SaaS product.
+This repository contains the completely redesigned frontend for **Get-Ryze.ai**. The project focuses on a premium, "Dark Mode First" aesthetic suitable for a high-tech AI SaaS product, implemented using a lightweight, high-performance stack.
 
 **Tech Stack:**
-*   **Framework:** Next.js 14+ (App Router)
-*   **Styling:** Tailwind CSS v4
-*   **Icons:** Lucide React
-*   **Animations:** Framer Motion
-*   **Language:** TypeScript
+*   **Core:** HTML5, Vanilla JavaScript
+*   **Styling:** Tailwind CSS v3
+*   **Build Tool:** Vite
+*   **Fonts:** Inter & Outfit (Google Fonts)
 
 ---
 
@@ -17,8 +16,6 @@ This repository contains the completely redesigned frontend for Get-Ryze.ai. The
 1.  **Clone the repository** & install dependencies:
     ```bash
     npm install
-    # or
-    yarn install
     ```
 
 2.  **Start the dev server**:
@@ -26,35 +23,30 @@ This repository contains the completely redesigned frontend for Get-Ryze.ai. The
     npm run dev
     ```
 
-3.  Open [http://localhost:3000](http://localhost:3000) to view the site.
+3.  Open the link provided in the terminal (usually `http://localhost:5173`) to view the site.
 
 ---
 
 ## 📦 Deployment Instructions
 
-### 1. Push to GitHub
-If you haven't already:
+### Deploy to Vercel (Recommended)
+This project is pre-configured for Vercel.
+
+1.  Push this code to your GitHub repository.
+2.  Go to [Vercel](https://vercel.com) and click **"Add New Project"**.
+3.  Import your repository.
+4.  Vercel will detect the `vercel.json` config and deploy automatically.
+    *   **Build Command:** `npm run build`
+    *   **Output Directory:** `dist`
+
+### Manual Build
+To build the static files for production:
 ```bash
-git init
-git add .
-git commit -m "Initial commit of Ryze Redesign"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/ryze-redesign.git
-git push -u origin main
+npm run build
 ```
-
-### 2. Deploy to Vercel (Recommended)
-1.  Go to [Vercel.com](https://vercel.com) and log in.
-2.  Click **"Add New"** > **"Project"**.
-3.  Select your GitHub repository (`ryze-redesign`).
-4.  Vercel will auto-detect Next.js.
-5.  Click **"Deploy"**.
-
-### 3. Deploy to Netlify
-1.  Go to Netlify and click **"New site from Git"**.
-2.  Connect GitHub and select the repo.
-3.  Build Command: `npm run build`
-4.  Publish Directory: `.next` (Netlify usually auto-detects Next.js).
-5.  Click **"Deploy Site"**.
+The output will be in the `dist/` folder, ready to be hosted on any static site hosting service (Netlify, GitHub Pages, etc.).
 
 ---
+
+## 📄 Documentation
+For a detailed explanation of design decisions and architecture, please see [SUBMISSION_EXPLANATION.md](./SUBMISSION_EXPLANATION.md).

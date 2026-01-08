@@ -6,11 +6,11 @@ This document outlines the core design, UX, and architectural decisions behind t
 ## 1. Visual Design System
 
 ### 1.1 Color Palette & Branding
-I transitioned from a cluttered light theme to a **“Dark Mode First” aesthetic** (`bg-void` #0A0A0A), inspired by modern developer tools such as Vercel, Raycast, and Linear. This establishes a premium, technical tone while reducing visual noise.
+I transitioned from a cluttered light theme to a **“Dark Mode First” aesthetic** (`bg-slate-950` #020617), inspired by modern developer tools such as Vercel, Raycast, and Linear. This establishes a premium, technical tone while reducing visual noise.
 
-*   **Primary Accent (Ember):** `#FF4801`. I selected this color for its strong contrast against dark backgrounds and its association with speed, energy, and action.
+*   **Primary Accent (Indigo & Rose):** I selected a gradient of `#6366f1` (Indigo) to `#f43f5e` (Rose). This combination balances the stability of blue with the energy of red, symbolizing "Intelligent Action".
 *   **Typography System:**
-    *   **Headings:** *Plus Jakarta Sans* — chosen for its geometric, modern, tech-forward character.
+    *   **Headings:** *Outfit* — chosen for its bold, modern, and friendly character.
     *   **Body:** *Inter* — used for its exceptional readability in dense UI and data-heavy contexts.
 
 ### 1.2 Layout & Visual Language
@@ -53,8 +53,8 @@ Although not component-based in the React sense, I maintained modularity by:
 
 ### 4.2 Accessibility (a11y) Standards
 *   **Semantic HTML:** Proper usage of `<main>`, `<section>`, `<nav>`, and `<header>` improves screen reader support and SEO.
-*   **Reduced Motion Support:** Animations implemented with `framer-motion` are designed to respect `prefers-reduced-motion`, allowing motion to be disabled for users with accessibility needs.
-*   **Color Contrast Compliance:** Text and UI elements (e.g., Zinc-400 on black backgrounds) were selected to meet **WCAG AA** contrast standards.
+*   **Reduced Motion Support:** CSS-based animations are lightweight and respectful of system resources.
+*   **Color Contrast Compliance:** Text and UI elements (e.g., Slate-400 on black backgrounds) were selected to meet **WCAG AA** contrast standards.
 
 ---
 
