@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ryze.ai Redesign - Assignment Submission
 
-## Getting Started
+## Project Overview
+This repository contains the completely redesigned frontend for Get-Ryze.ai. The project focuses on a premium, dark-mode-first aesthetic suitable for a high-tech AI SaaS product.
 
-First, run the development server:
+**Tech Stack:**
+*   **Framework:** Next.js 14+ (App Router)
+*   **Styling:** Tailwind CSS v4
+*   **Icons:** Lucide React
+*   **Animations:** Framer Motion
+*   **Language:** TypeScript
 
+---
+
+## 🚀 How to Run Locally
+
+1.  **Clone the repository** & install dependencies:
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+2.  **Start the dev server**:
+    ```bash
+    npm run dev
+    ```
+
+3.  Open [http://localhost:3000](http://localhost:3000) to view the site.
+
+---
+
+## 📦 Deployment Instructions
+
+### 1. Push to GitHub
+If you haven't already:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git init
+git add .
+git commit -m "Initial commit of Ryze Redesign"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/ryze-redesign.git
+git push -u origin main
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Deploy to Vercel (Recommended)
+1.  Go to [Vercel.com](https://vercel.com) and log in.
+2.  Click **"Add New"** > **"Project"**.
+3.  Select your GitHub repository (`ryze-redesign`).
+4.  Vercel will auto-detect Next.js.
+5.  Click **"Deploy"**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Deploy to Netlify
+1.  Go to Netlify and click **"New site from Git"**.
+2.  Connect GitHub and select the repo.
+3.  Build Command: `npm run build`
+4.  Publish Directory: `.next` (Netlify usually auto-detects Next.js).
+5.  Click **"Deploy Site"**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
