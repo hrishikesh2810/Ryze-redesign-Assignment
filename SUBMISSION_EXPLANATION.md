@@ -1,46 +1,57 @@
-# Design & Structural Decisions - Ryze Redesign
+# Ryze Redesign — Design & Structural Decisions
 
-## 1. Design Decisions
+## Overview
+This document outlines the core design, UX, and architectural decisions behind the Ryze redesign. The objective was to create a modern, high-performance interface that clearly communicates product value, improves usability, and enables rapid iteration through modular development.
 
-### **Color Palette & Branding**
-We moved away from the previous cluttered light theme to a **"Dark Mode First" aesthetics** (`bg-void` #0A0A0A) heavily influenced by modern developer tools (like Vercel, Raycast, Linear).
-*   **Primary Accent (Ember):** `#FF4801`. Chosen for its high energy and contrast against the dark background, symbolizing speed and action.
-*   **Typography:** We paired **Plus Jakarta Sans** (Headings) for its geometric, modern tech feel with **Inter** (Body) for unmatched legibility in dense data contexts.
+## 1. Visual Design System
 
-### **Layout Choices**
-*   **Bento Grid:** The "Capabilities" section uses a Bento-style grid. This breaks away from standard "row-after-row" layouts, making the features feel like a cohesive dashboard.
-*   **Glassmorphism:** Subtle transparent borders and backgrounds (`bg-white/5`) are used on cards to create depth without visual weight.
+### 1.1 Color Palette & Branding
+I transitioned from a cluttered light theme to a **“Dark Mode First” aesthetic** (`bg-void` #0A0A0A), inspired by modern developer tools such as Vercel, Raycast, and Linear. This establishes a premium, technical tone while reducing visual noise.
 
----
+*   **Primary Accent (Ember):** `#FF4801`. I selected this color for its strong contrast against dark backgrounds and its association with speed, energy, and action.
+*   **Typography System:**
+    *   **Headings:** *Plus Jakarta Sans* — chosen for its geometric, modern, tech-forward character.
+    *   **Body:** *Inter* — used for its exceptional readability in dense UI and data-heavy contexts.
 
-## 2. UX Improvements
-
-### **Navigation & Hierarchy**
-*   **Fixed Navigation:** The navbar is now sticky with a backdrop blur, ensuring the "Get Started" CTA is always accessible.
-*   **Clearer Product Definition:** The Hero section explicitly states "Autonomous AI Media Buyer" instead of vague marketing terms. The dashboard visualization immediately grounds the user in *what the product is*.
-*   **Call-to-Action:** CTAs were upgraded from generic buttons to high-visibility elements. The "Audit My Account" CTA is prioritized to capture high-intent leads.
+### 1.2 Layout & Visual Language
+*   **Bento Grid System:** The Capabilities section uses a Bento-style layout instead of traditional stacked rows. This creates a dashboard-like experience that visually reinforces the product’s functionality.
+*   **Glassmorphism:** Subtle transparency (`bg-white/5`) and soft borders add depth and hierarchy without overwhelming the interface or increasing cognitive load.
 
 ---
 
-## 3. Modular Architecture
+## 2. User Experience (UX) Strategy
 
-### **Component-Based Structure**
-The codebase is strictly modular. Every major UI part is a standalone component in `/components`:
-*   `/sections` contains page-level blocks (Hero, Features, Footer).
-*   `/ui` contains atomic elements (Buttons, Inputs).
-*   `/layout` contains global wrappers (Navbar).
-
-This allows the marketing team to "mix and match" sections to create new landing pages without writing code.
+### 2.1 Navigation & Information Hierarchy
+*   **Sticky Navigation:** I implemented a fixed navbar with backdrop blur to ensure persistent access to the primary CTA, improving conversion opportunities.
+*   **Clear Product Positioning:** The hero section explicitly defines the product as an **“Autonomous AI Media Buyer”**, replacing ambiguous marketing language. A dashboard-style visual immediately contextualizes what the product does.
+*   **Optimized Calls-to-Action:** CTAs were redesigned for visibility and intent. The **“Audit My Account”** action is prioritized to capture high-intent users and accelerate lead qualification.
 
 ---
 
-## 4. Mobile & Accessibility
+## 3. System Architecture & Scalability
 
-### **Responsive Design**
-*   **Fluid Grids:** All grids (Features, Testimonials) automatically stack from `grid-cols-3` to `grid-cols-1` on mobile.
-*   **Touch Targets:** All interactive elements meet the minimum 44px height requirement.
+### 3.1 Modular Component Design
+The codebase follows a strictly component-based architecture to maximize reusability and development speed.
+*   `/components/sections` – Page-level modules (Hero, Features, Footer)
+*   `/components/ui` – Atomic UI elements (Buttons, Inputs, Badges)
+*   `/components/layout` – Global structural components (Navbar, Wrappers)
 
-### **Accessibility (a11y)**
-*   **Semantic HTML:** We use proper `<main>`, `<section>`, `<nav>`, and `<header>` tags.
-*   **Reduced Motion:** Animations use `framer-motion` but can be easily disabled or respected via `prefers-reduced-motion` queries in the future.
-*   **Contrast:** Text colors (Zinc-400 on Black) were carefully selected to pass WCAG AA standards.
+**Outcome:** This structure allows new landing pages to be assembled by recombining existing components, without requiring new engineering work.
+
+---
+
+## 4. Responsiveness & Accessibility
+
+### 4.1 Mobile-First & Responsive Design
+*   **Fluid Grid System:** All grid-based layouts (Features, Testimonials, Capabilities) responsively adapt from multi-column to single-column on smaller screens.
+*   **Touch Optimization:** Interactive elements respect the minimum **44px** touch target standard to ensure usability on mobile devices.
+
+### 4.2 Accessibility (a11y) Standards
+*   **Semantic HTML:** Proper usage of `<main>`, `<section>`, `<nav>`, and `<header>` improves screen reader support and SEO.
+*   **Reduced Motion Support:** Animations implemented with `framer-motion` are designed to respect `prefers-reduced-motion`, allowing motion to be disabled for users with accessibility needs.
+*   **Color Contrast Compliance:** Text and UI elements (e.g., Zinc-400 on black backgrounds) were selected to meet **WCAG AA** contrast standards.
+
+---
+
+## Summary
+The Ryze redesign prioritizes clarity, performance, and scalability. Through a dark-first design system, explicit product positioning, modular architecture, and accessibility-first thinking, the interface supports both user conversion and long-term maintainability.
